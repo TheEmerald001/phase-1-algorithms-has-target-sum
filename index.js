@@ -1,6 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+    const compareNumbers = [...array];
+  
+    for (const element of array) {
+      const betterHalf = target - element;
+      if (betterHalf in compareNumbers) return true;
+      compareNumbers[element] = true;
+    }
+  
+    return false;
+  }
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +17,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  //create a function that allows two parameters, an array and a target integer
+  //create an array that contains 
 */
 
 /*
